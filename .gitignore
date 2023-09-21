@@ -1,0 +1,4 @@
+data/output/*
+__pycache__
+data/sequence_dict.json
+main
