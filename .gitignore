@@ -2,4 +2,7 @@ data/dupe_seq/*.json
 __pycache__
 data/sequence_dict.json
 main
+dupe_seq_finder
+gene_dupe_search
 data/dupe_idx_maps.json
+.vscode
