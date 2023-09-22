@@ -1,3 +1,3 @@
-module non_readable/main
+module non_readable_ranges
 
 go 1.20

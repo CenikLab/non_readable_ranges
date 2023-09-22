@@ -1,4 +1,5 @@
-data/output/*
+data/dupe_seq/*.json
 __pycache__
 data/sequence_dict.json
 main
+data/dupe_idx_maps.json

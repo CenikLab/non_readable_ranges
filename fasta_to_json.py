@@ -3,6 +3,7 @@ import ribopy
 from Fasta import FastaFile
 import json
 from argparse import ArgumentParser
+from utils import get_cds_range_lookup
 
 study = 'GSE51584'
 experiment = 'GSM1248729'
@@ -23,3 +24,8 @@ sequence_dict = {
 
 with open("data/sequence_dict.json", 'w+') as f:
     json.dump(sequence_dict, f)
+
+boundary_lookup = get_cds_range_lookup(ribo)
+cds_ranges = {k: [int(v[1][0]), int(v[1][1])] for k, v in boundary_lookup.items()}
+with open("data/cds_ranges.json", 'w+') as f:
+    json.dump(cds_ranges, f)

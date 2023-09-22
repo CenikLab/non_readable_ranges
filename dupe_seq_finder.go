@@ -69,12 +69,12 @@ func main() {
 
 			filtered := filter_freq_dict(merged)
 			fmt.Printf("Read Length %d filtered with length %d. Saving...\n", read_length, len(filtered))
-			
+
 			// write to a json file
 			jsonData, err := json.Marshal(filtered)
 			panic_on_err(err)
 
-			filename := fmt.Sprintf("output/dupe_seq_%d.json", read_length)
+			filename := fmt.Sprintf("data/dupe_seq/dupe_seq_%d.json", read_length)
 			file, err := os.Create(filename)
 			panic_on_err(err)
 			defer file.Close()
@@ -127,7 +127,7 @@ func merge_freq_dicts(d1, d2 Frequencies) (d3 Frequencies) {
 }
 
 // merge a list of frequency maps, freq_dicts, into one frequency map
-// if the same key exists in multiple maps, the value in the result will 
+// if the same key exists in multiple maps, the value in the result will
 // be the sum of the values across the maps
 func merge_freq_dict_list(freq_dicts []Frequencies) (merged Frequencies) {
 
