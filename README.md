@@ -1,5 +1,5 @@
-# Non Readable Range Finder
-This repo houses a collection of scripts to find duplicate and therefore non-readable ranges in a transcriptome. The `data/gene_correction_map.csv` file contains the number of CDS indices for 
+# Non-Readable Range Finder
+This repo houses a collection of scripts to find duplicate and therefore non-readable ranges in a transcriptome. The `data/gene_correction_map.csv` file contains the number of CDS indices per gene and read length that are non-readable.
 
 ## Dependencies
 - Python for taking a Fasta file and converting it into a JSON map of genes to sequence strings. RiboPy is also needed.
